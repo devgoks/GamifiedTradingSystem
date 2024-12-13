@@ -46,7 +46,7 @@
   Runs every 60 seconds to update asset prices.
 
 - **Leaderboard Updates**  
-  Runs every 5 seconds to refresh the leaderboard.  
+  Runs every 5 seconds to update the leaderboard.  
 
 
 
