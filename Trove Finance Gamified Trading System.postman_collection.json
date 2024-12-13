@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "31c6fb27-09f0-4f07-be8b-643d441b7f1f",
+		"name": "Trove Finance Gamified Trading System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "2921007"
+	},
+	"item": [
+		{
+			"name": "Get Top N Users Leaderboard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/leaderboard?topN=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"leaderboard"
+					],
+					"query": [
+						{
+							"key": "topN",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Asset",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userId\": 1,\n  \"assetId\": 1003,\n  \"name\": \"Bitcoin\",\n  \"quantity\": 5,\n  \"price\": 45000.50\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/portfolio/add-asset"
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"tunde test 1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/user"
+			},
+			"response": []
+		},
+		{
+			"name": "Fund User Balance",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 1,\n    \"amount\": 35000.80\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/user/fund-balance"
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Asset",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userId\": 1,\n  \"assetId\": 1003\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/portfolio/remove-asset"
+			},
+			"response": []
+		},
+		{
+			"name": "Trade",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 1,\n    \"assetId\": 1003,\n    \"quantity\": 3,\n    \"isBuy\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/trade"
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By User ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/user/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Portfolio By User ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/portfolio/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Insights",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/insights"
+			},
+			"response": []
+		}
+	]
+}
